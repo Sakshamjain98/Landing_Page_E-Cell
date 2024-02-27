@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: 0;
+    text-transform: capitalize;
+    transition: all ease 0.2s;
+}
+
+html{
+    font-size: 62.8%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: white;
+    background-repeat: no-repeat;
+    font-family: "Poppins", sans-serif;
+    /* color: #0e0f31; */
+}
+
+*::selection{
+    background-color: blue;
+    color: white;
+}
+
+html::-webkit-scrollbar-track{
+    background-color:  rgb(235, 202, 245);
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color:  #420177;
+}
+
+/* Navbar Starts */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10rem;
+    background-color:  #fff;
+    padding: 1.7rem, 10%;
+    box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
+}
+
+header .logo img{
+   height: 7rem;
+   width: auto;
+   margin-left: 2rem;
+}
+
+
+header .logo img:hover{
+    height: 8rem;
+}
+
+header .navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .navbar li{
+    padding: 1.5rem;
+    margin-left: 3rem;
+    margin-right: 0.5rem;
+}
+
+header .navbar ul li a{
+    font-size: 1.57rem;
+    font-weight: 600;
+    color: #0e2431;
+    letter-spacing: 0.04rem;
+    transition: 0.2s;
+    text-decoration: none;
+    /* margin-left: 3rem; */
+}
+
+header .navbar ul li a:active{
+    color: #011aff;
+    border-bottom: 0.2rem solid #011aff;
+    padding: 0.5rem 0;
+}
+
+ header .navbar ul li a:hover{
+    color: #011aff;
+    border-bottom: 0.2rem solid #011aff;
+    margin: 1rem;
+    padding: 0.5rem 0;
+}
+
+/* Navbar Ends */
+
+/* Hamburger section starts */
+
+#menu{
+    font-size: 3rem;
+    color: rgb(24, 2, 63);
+    display: none;
+    cursor: pointer;
+}
+
+/* Responsiveness starts */
+@media (max-width:768px) {
+    #menu{
+        display: block;
+    }
+
+    #con{
+        margin-bottom: 4rem;
+    }
+
+    header .navbar{
+        position: fixed;
+        top: 6.8rem;
+        right: -120%;
+        width: 75%;
+        height: 100%;
+        text-align: left;
+        align-items: flex-start;
+        background-color: #0e0f31;
+        overflow: scroll;
+        scroll-behavior: smooth;
+    }
+
+    header .navbar ul{
+        flex-flow: column;
+        padding: 1rem;
+    }
+
+    header .navbar ul li{
+        align-items: center;
+        width: 26rem;
+        border-radius: 0.5rem;
+        margin: 1rem 0;
+    }
+
+    header .navbar ul li a{
+        display: block;
+        padding: 1rem;
+        text-align: left;
+        color: #fff;
+        font-size: 2rem;
+}
+
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover {
+  padding: 1rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  border-bottom: 0.5rem solid #011aff;
+}
+.fa-times {
+  transform: rotate(180deg);
+}
+header .navbar.nav-toggle {
+  right: 0;
+  transition: 1s;
+}
+}
+
+/* Hamburger Item ends */
+
+/* Home Page  */
+
+.home{
+    position: relative;
+    margin-top: 10rem;
+    height: 100vh; 
+}
+
+.home #particles-js{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.display{
+    align-items: 50vh;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.home .display .content{
+    /* height: 80vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    width: 50%;
+}
+
+.home .display .content h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4rem;
+    width: 80%;
+    letter-spacing: 0.5rem;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.home .display .content h2 span{
+    color: #011affc2;
+}
+
+.home .display .content p{
+    font-size: 1.2rem;
+    text-align: center;
+    width: 70%;
+    margin-top: 2rem;
+    line-height: 2rem;
+}
+
+.home .display .content button{
+    font-size: 2rem;
+    font-weight: 700;
+    font-family:'Courier New', Courier, monospace;
+    height: 4rem;
+    width: 12rem;
+    margin-top: 4rem;
+    background: transparent;
+    border: .2rem solid black;
+    border-radius: 10%;
+}
+
+
+
+/* Responsiveness starts */
+@media (max-width:768px) {
+    .display{
+        flex-flow: column;
+    }
+    .home .display .content{
+        width: 100%;
+    }
+}
